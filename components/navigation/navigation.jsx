@@ -8,6 +8,11 @@ import ShoppingCartIcon from "../cart-icon/cart-icon.component";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import logo from "../../assets/logo.png";
+
+import { useContext } from "react";
+import { CartContext } from "@/contexts/cart.context";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+
 import dynamic from "next/dynamic";
 
 const useStyles = makeStyles({
@@ -26,6 +31,7 @@ const useStyles = makeStyles({
 
 function Navigation() {
   const classes = useStyles();
+  const { isCartOpen } = useContext(CartContext);
 
   return (
     <AppBar
@@ -58,6 +64,7 @@ function Navigation() {
           </IconButton>
         </div>
       </Toolbar>
+      {isCartOpen && <CartDropdown />}
     </AppBar>
   );
 }
