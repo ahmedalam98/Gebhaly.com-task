@@ -28,7 +28,10 @@ function Navigation() {
   const classes = useStyles();
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      sx={{ background: "linear-gradient(90deg, #659999, #f4791f)" }}
+    >
       <Toolbar>
         <div className={classes.logo}>
           <Link href="/">
