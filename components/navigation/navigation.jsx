@@ -32,29 +32,34 @@ const useStyles = makeStyles({
 function Navigation() {
   const classes = useStyles();
   const { isCartOpen } = useContext(CartContext);
-
   return (
-    <AppBar
-      position="static"
-      sx={{ background: "linear-gradient(90deg, #659999, #f4791f)" }}
-    >
+    <AppBar position="fixed" sx={{ backgroundColor: "white" }}>
       <Toolbar>
         <div className={classes.logo}>
           <Link href="/">
             <Image
               src={logo}
               alt="My Logo"
-              width={150}
-              height={75}
-              style={{ marginTop: 5, padding: 5, borderRadius: 25 }}
+              width={160}
+              height={80}
+              style={{ marginTop: 5, padding: 5 }}
             />
           </Link>
         </div>
+
         <div className={classes.checkout}>
+          <Link href="/">
+            <Typography
+              component="a"
+              sx={{ marginRight: 3, fontSize: "1.4rem", color: "#151515" }}
+            >
+              Sign In
+            </Typography>
+          </Link>
           <Link href="/checkout">
             <Typography
               component="a"
-              sx={{ marginRight: 3, fontSize: "1.4rem", fontWeight: "bold" }}
+              sx={{ marginRight: 3, fontSize: "1.4rem", color: "#151515" }}
             >
               Checkout
             </Typography>
