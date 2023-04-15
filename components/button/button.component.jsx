@@ -16,8 +16,10 @@ const MyButton = styled(Button)({
   },
 });
 
-function CenteredButton() {
-  return <MyButton>Add to Cart</MyButton>;
+function CenteredButton(props) {
+  //passing the onClick prop to the Button component inside the CenteredButton component
+  const { onClick } = props;
+  return <MyButton onClick={onClick}>Add To Cart</MyButton>;
 }
 
 export default CenteredButton;

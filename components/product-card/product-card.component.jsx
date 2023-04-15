@@ -5,9 +5,16 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import CenteredButton from "../button/button.component";
 
+import { useContext } from "react";
+import { CartContext } from "@/contexts/cart.context";
+
 import styles from "./product-card.module.scss";
 
 function ProductCard({ product }) {
+  const { addItemToCart } = useContext(CartContext);
+
+  const addProductToCart = () => addItemToCart(product);
+
   return (
     <Card sx={{ maxWidth: 230 }} className={styles.card}>
       <Link href={`/products/category/${product.category}`} passHref>
@@ -41,7 +48,7 @@ function ProductCard({ product }) {
         </Typography>
       </CardContent>
       <CardContent>
-        <CenteredButton />
+        <CenteredButton onClick={addProductToCart} />
       </CardContent>
     </Card>
   );
