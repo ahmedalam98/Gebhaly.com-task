@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "@/contexts/cart.context";
 
+import Link from "next/link";
 import CartItem from "../cart-item/cart-item.component";
 import CenteredButton from "../button/button.component";
 
@@ -22,7 +23,11 @@ const CartDropdown = () => {
         })}
       </div>
       {/* Guard-clause to show the checkout button in case products found in cart */}
-      {cartItems.length !== 0 && <CenteredButton variant="checkout" />}
+      {cartItems.length !== 0 && (
+        <Link href="/checkout">
+          <CenteredButton variant="checkout" />
+        </Link>
+      )}
     </div>
   );
 };

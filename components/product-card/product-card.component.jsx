@@ -17,15 +17,20 @@ function ProductCard({ product }) {
 
   return (
     <Card sx={{ maxWidth: 230 }} className={styles.card}>
-      <Link href={`/products/category/${product.category}`} passHref>
-        <CardMedia
-          component="a"
-          href={`/products/category/${product.category}`}
-          sx={{ height: 200, width: 200, marginLeft: 2 }}
-          image={product.image}
-          alt={product.title}
-        />
-      </Link>
+      <CardMedia
+        component="a"
+        sx={{
+          height: 0,
+          //  to create a square aspect ratio that matches the dimensions of the specified space
+          paddingTop: "100%",
+          // scale the image to fit within the CardMedia component
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundImage: `url(${product.image})`,
+        }}
+        alt={product.title}
+      />
       <CardContent>
         <Typography
           gutterBottom
