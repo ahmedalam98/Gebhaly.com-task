@@ -1,9 +1,7 @@
-const CheckOut = () => {
-  return (
-    <div>
-      <h1>Hello Checkout</h1>
-    </div>
-  );
+import CheckoutPage from "@/components/checkout-page/checkout-page.component";
+
+const Checkout = () => {
+  return <CheckoutPage />;
 };
 
-export default CheckOut;
+export default Checkout;
