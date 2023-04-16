@@ -13,7 +13,7 @@ import styles from "./product-card.module.scss";
 function ProductCard({ product }) {
   const { addItemToCart } = useContext(CartContext);
 
-  const addProductToCart = () => addItemToCart(product);
+  const addProductHandler = () => addItemToCart(product);
 
   return (
     <Card sx={{ maxWidth: 230 }} className={styles.card}>
@@ -41,7 +41,7 @@ function ProductCard({ product }) {
           {product.title.split(" ").slice(0, 4).join(" ")}
         </Typography>
         <Typography color="rgb(0, 0, 177)" sx={{ fontSize: "1.2rem" }}>
-          {product.category}
+          {product.available}
         </Typography>
         <br />
         <Typography
@@ -53,7 +53,7 @@ function ProductCard({ product }) {
         </Typography>
       </CardContent>
       <CardContent>
-        <CenteredButton onClick={addProductToCart} />
+        <CenteredButton onClick={addProductHandler} />
       </CardContent>
     </Card>
   );

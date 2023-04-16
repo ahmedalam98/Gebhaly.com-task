@@ -5,7 +5,6 @@ import ProductsPage from "@/components/products-page/products-page.component";
 
 const HomePage = () => {
   const { products } = useContext(ProductsContext);
-  console.log(products);
 
   return (
     <div>
