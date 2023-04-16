@@ -51,7 +51,12 @@ function Navigation() {
           <Link href="/">
             <Typography
               component="a"
-              sx={{ marginRight: 3, fontSize: "1.4rem", color: "#151515" }}
+              sx={{
+                marginRight: 3,
+                fontSize: "1.4rem",
+                color: "#151515",
+                "&:hover": { color: "#ffa200" },
+              }}
             >
               Sign In
             </Typography>
@@ -59,7 +64,12 @@ function Navigation() {
           <Link href="/checkout">
             <Typography
               component="a"
-              sx={{ marginRight: 3, fontSize: "1.4rem", color: "#151515" }}
+              sx={{
+                marginRight: 3,
+                fontSize: "1.4rem",
+                color: "#151515",
+                "&:hover": { color: "#ffa200" },
+              }}
             >
               Checkout
             </Typography>

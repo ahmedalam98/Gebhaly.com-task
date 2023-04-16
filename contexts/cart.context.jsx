@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext({
   isCartOpen: false,
@@ -31,12 +31,20 @@ const addCartItem = (cartItems, productToAdd) => {
 
 export const CartProvider = ({ children }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    // get back cartItems from local storage if available, otherwise return an empty array
+    return JSON.parse(localStorage.getItem("cartItems")) || [];
+  });
 
   const addItemToCart = (productToAdd) => {
     setCartItems(addCartItem(cartItems, productToAdd));
     console.log("Clicked from context");
   };
+
+  useEffect(() => {
+    // when cartItems array changes anytime, then save cartItems to local storage
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const value = {
     isCartOpen,
