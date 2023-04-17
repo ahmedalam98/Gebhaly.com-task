@@ -8,9 +8,9 @@
 
 <div align="center">
   <a href="#">
-    <img src="./public/favicon.io" alt="project logo" width="80">
+    <img src="./assets/logo.png" alt="project logo" width="200">
   </a>
-  <h1>Gebhaly</h1>
+  <h1>Gebhaly.com</h1>
   <p align="center">
   <a href="#">View Demo</a>
     ·
@@ -29,15 +29,37 @@ Simple responsive E-commerce app that consumes dummy data from [fakestoreAPI](ht
   - view cart (items quantity, items cost, total cost)
   - edit cart (edit item quantity, remove item)
 - Responsive design
-  <br/>
+ 
+ ## Built with
+
+- Next.js
+- TypeScript
+- React
+- Context API
+- Sass
+- Material UI
+
   ![Preview1](./assets/preview1.png)
   ![Preview2](./assets/preview2.png)
 
-## Built with
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-- React
-- Context API
-- Next.js
-- TypeScript
-- Sass
-- Material UI
+### Installation
+
+> To get a local copy up and running follow these simple steps :
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/ahmedalam98/Gebhaly.com-task.git
+   ```
+2. Install dependencies 
+   ```sh
+   npm install
+   ```
+3. Development mode
+   ```sh
+   npm run dev
+   ```
+4. Open `"http://localhost:3000"` with your browser to see the result. 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
