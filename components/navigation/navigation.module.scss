@@ -1,0 +1,13 @@
+// Responsive Design
+// Mobile Phones
+@media screen and (max-width: 768px) {
+  .image {
+    width: 120px;
+    height: 60px;
+  }
+
+  .typography {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+}

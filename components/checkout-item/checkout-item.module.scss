@@ -15,18 +15,16 @@
     width: 18%;
     padding-left: 26px;
   }
-  .quantity {
-    width: 28%;
-    padding-left: 2%;
-  }
-
   .price {
     width: 27%;
   }
 
   .quantity {
+    width: 28%;
+    padding-left: 2%;
     display: flex;
     margin-left: 6rem;
+
     .arrow {
       cursor: pointer;
       margin: 0 10px;
@@ -41,5 +39,71 @@
     padding-left: 12px;
     cursor: pointer;
     margin-right: 6%;
+  }
+}
+
+//////////////////////////////////////////////////
+// Responsive Design
+
+// Tablets
+@media screen and (max-width: 1023px) {
+  .title {
+    font-size: 1rem;
+  }
+  .quantity {
+    width: 28%;
+    padding-left: 2%;
+    display: flex;
+    margin-left: 0rem;
+
+    .arrow {
+      cursor: pointer;
+      margin: 0;
+    }
+
+    .value {
+      margin: 0;
+    }
+  }
+}
+
+// Mobile Phones
+@media only screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+    align-items: center;
+    justify-items: center;
+
+    .imageContainer {
+      grid-row: 1 / 2;
+      grid-column: 1 / 4;
+
+      margin-right: 6rem;
+      margin-bottom: 2rem;
+    }
+    .image {
+      width: 180px;
+      height: 180px;
+    }
+
+    .title {
+      display: none;
+    }
+
+    .quantity,
+    .price {
+      transform: translateX(-80%);
+      margin-right: 1rem;
+    }
+
+    .price {
+      text-align: center;
+    }
+
+    .remove {
+      margin-right: 2rem;
+    }
   }
 }
