@@ -41,7 +41,7 @@ function ProductCard({ product }) {
           {product.title.split(" ").slice(0, 4).join(" ")}
         </Typography>
         <Typography color="rgb(0, 0, 177)" sx={{ fontSize: "1.2rem" }}>
-          {product.available}
+          {product.category}
         </Typography>
         <br />
         <Typography
