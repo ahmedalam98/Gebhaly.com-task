@@ -34,10 +34,10 @@ function Navigation() {
           </Link>
         </div>
 
-        <div className={styles.checkout}>
+        <div className={styles.links}>
           <Link href="/">
             <Typography
-              className={styles.typography}
+              className={styles.signIn}
               component="a"
               sx={{
                 marginRight: 3,
@@ -51,7 +51,7 @@ function Navigation() {
           </Link>
           <Link href="/checkout">
             <Typography
-              className={styles.typography}
+              className={styles.checkout}
               component="a"
               sx={{
                 marginRight: 3,

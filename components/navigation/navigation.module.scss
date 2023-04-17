@@ -6,7 +6,7 @@
   }
 }
 
-.checkout {
+.links {
   display: flex;
   align-items: center;
 }
@@ -19,8 +19,12 @@
     height: 60px;
   }
 
-  .typography {
+  .checkout {
     font-size: 1.2rem;
     margin-right: 1rem;
+  }
+
+  .signIn {
+    display: none;
   }
 }
