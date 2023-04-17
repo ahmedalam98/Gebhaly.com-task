@@ -1,6 +1,16 @@
 import styles from "./cart-item.module.scss";
 
-const CartItem = ({ cartItem }) => {
+interface CartItem {
+  title: string;
+  quantity: number;
+  price: number;
+}
+
+interface CartItemProps {
+  cartItem: CartItem;
+}
+
+const CartItem: React.FC<CartItemProps> = ({ cartItem }) => {
   const { title, quantity, price } = cartItem;
 
   return (
