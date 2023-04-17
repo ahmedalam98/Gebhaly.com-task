@@ -17,7 +17,13 @@ const CheckoutItem = ({ cartItem }) => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <Image src={image} alt={`${title}`} width="150" height="150" />
+        <Image
+          src={image}
+          alt={`${title}`}
+          width="150"
+          height="150"
+          className={styles.image}
+        />
       </div>
       <span className={styles.title}> {title} </span>
       <span className={styles.quantity}>
@@ -30,9 +36,9 @@ const CheckoutItem = ({ cartItem }) => {
         </div>
       </span>
       <span className={styles.price}> {price} $ </span>
-      <div className={styles.remove} onClick={clearItemHandler}>
+      <span className={styles.remove} onClick={clearItemHandler}>
         &#10005;
-      </div>
+      </span>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import styles from "./footer.module.scss";
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <footer className={styles.footer}>
       <span className={styles.text}>© Created By :</span>

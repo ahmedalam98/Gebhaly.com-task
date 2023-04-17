@@ -3,14 +3,10 @@ import { ProductsContext } from "@/contexts/products.context";
 
 import ProductsPage from "@/components/products-page/products-page.component";
 
-const HomePage = () => {
+const HomePage = (): JSX.Element => {
   const { products } = useContext(ProductsContext);
 
-  return (
-    <div>
-      <ProductsPage products={products} />
-    </div>
-  );
+  return <ProductsPage products={products} />;
 };
 
 export default HomePage;

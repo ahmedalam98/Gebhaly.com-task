@@ -1,13 +1,30 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, ReactNode } from "react";
 
 import Spinner from "@/components/spinner/spinner.component";
 
-export const ProductsContext = createContext({
+interface Product {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  image: string;
+  price: number;
+}
+
+interface ProductsContextType {
+  products: Product[];
+}
+
+export const ProductsContext = createContext<ProductsContextType>({
   products: [],
 });
 
-export const ProductsProvider = ({ children }) => {
-  const [products, setProducts] = useState([]);
+interface Props {
+  children: ReactNode;
+}
+
+export const ProductsProvider = ({ children }: Props): JSX.Element => {
+  const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -17,18 +34,18 @@ export const ProductsProvider = ({ children }) => {
           "https://fakestoreapi.com/products?sort=desc"
         );
         const data = await response.json();
-        // manual sorting of incoming categories
+        // manual sorting to incoming categories
         const electronics = data.filter(
-          (product) => product.category === "electronics"
+          (product: Product) => product.category === "electronics"
         );
         const jewelery = data.filter(
-          (product) => product.category === "jewelery"
+          (product: Product) => product.category === "jewelery"
         );
         const menClothing = data.filter(
-          (product) => product.category === "men's clothing"
+          (product: Product) => product.category === "men's clothing"
         );
         const womenClothing = data.filter(
-          (product) => product.category === "women's clothing"
+          (product: Product) => product.category === "women's clothing"
         );
         const sortedProducts = [
           ...electronics,
@@ -46,7 +63,7 @@ export const ProductsProvider = ({ children }) => {
     fetchProducts();
   }, []);
 
-  const value = { products };
+  const value: ProductsContextType = { products };
   return (
     <ProductsContext.Provider value={value}>
       {isLoading ? <Spinner /> : children}

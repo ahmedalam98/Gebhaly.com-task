@@ -15,6 +15,8 @@ import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 import dynamic from "next/dynamic";
 
+import styles from "./navigation.module.scss";
+
 const useStyles = makeStyles({
   logo: {
     flexGrow: 1,
@@ -38,6 +40,7 @@ function Navigation() {
         <div className={classes.logo}>
           <Link href="/">
             <Image
+              className={styles.image}
               src={logo}
               alt="My Logo"
               width={160}
@@ -50,6 +53,7 @@ function Navigation() {
         <div className={classes.checkout}>
           <Link href="/">
             <Typography
+              className={styles.typography}
               component="a"
               sx={{
                 marginRight: 3,
@@ -63,6 +67,7 @@ function Navigation() {
           </Link>
           <Link href="/checkout">
             <Typography
+              className={styles.typography}
               component="a"
               sx={{
                 marginRight: 3,

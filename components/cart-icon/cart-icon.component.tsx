@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.context";
 
 import { ShoppingCart } from "@mui/icons-material";
+import styles from "./cart-icon.module.scss";
 
 function ShoppingCartIcon() {
   const { isCartOpen, setIsCartOpen, cartItems } = useContext(CartContext);
@@ -11,6 +12,7 @@ function ShoppingCartIcon() {
   return (
     <div onClick={toggleIsCartOpen}>
       <ShoppingCart
+        className={styles.icon}
         sx={{
           fontSize: "2.6rem",
           color: cartItems.length === 0 ? "#151515" : "#ffa908",
