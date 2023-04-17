@@ -7,16 +7,27 @@
 ![MUI](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
 
 <div align="center">
-  <a href="#">
+  <a href="https://gebhaly-ahmedalam98.vercel.app">
     <img src="./assets/logo.png" alt="project logo" width="200">
   </a>
   <h1>Gebhaly.com</h1>
   <p align="center">
-  <a href="#">View Demo</a>
+  <a href="https://gebhaly-ahmedalam98.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/ahmedalam98/Gebhaly.com-task/issues">Report Bug</a>
   </p>
 </div>
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+  </ol>
+</details>
 
 ## About The Project
 
@@ -44,7 +55,7 @@ Simple responsive E-commerce app that consumes dummy data from [fakestoreAPI](ht
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Installation
+## Getting Started
 
 > To get a local copy up and running follow these simple steps :
 
