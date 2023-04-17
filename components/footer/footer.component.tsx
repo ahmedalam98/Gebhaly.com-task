@@ -4,7 +4,7 @@ const Footer = (): JSX.Element => {
   return (
     <footer className={styles.footer}>
       <span className={styles.text}>© Created By :</span>
-      <a href="https://github.com/ahmedalam98" target="_blank" rel="author">
+      <a href="https://www.ahmedalameldeen.me/" target="_blank" rel="author">
         Ahmed Alam El-Deen
       </a>
     </footer>

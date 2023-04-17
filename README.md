@@ -7,12 +7,12 @@
 ![MUI](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
 
 <div align="center">
-  <a href="https://gebhaly-ahmedalam98.vercel.app">
+  <a href="https://gebhaly-ahmedalam98.vercel.app" target="_blank">
     <img src="./assets/logo.png" alt="project logo" width="200">
   </a>
   <h1>Gebhaly.com</h1>
   <p align="center">
-  <a href="https://gebhaly-ahmedalam98.vercel.app">View Demo</a>
+  <a href="https://gebhaly-ahmedalam98.vercel.app" target="_blank">View Demo</a>
     ·
     <a href="https://github.com/ahmedalam98/Gebhaly.com-task/issues">Report Bug</a>
   </p>
@@ -40,8 +40,8 @@ Simple responsive E-commerce app that consumes dummy data from [fakestoreAPI](ht
   - view cart (items quantity, items cost, total cost)
   - edit cart (edit item quantity, remove item)
 - Responsive design
- 
- ## Built with
+
+## Built with
 
 - Next.js
 - TypeScript
@@ -63,7 +63,7 @@ Simple responsive E-commerce app that consumes dummy data from [fakestoreAPI](ht
    ```sh
    git clone https://github.com/ahmedalam98/Gebhaly.com-task.git
    ```
-2. Install dependencies 
+2. Install dependencies
    ```sh
    npm install
    ```
@@ -71,6 +71,6 @@ Simple responsive E-commerce app that consumes dummy data from [fakestoreAPI](ht
    ```sh
    npm run dev
    ```
-4. Open `"http://localhost:3000"` with your browser to see the result. 
+4. Open `"http://localhost:3000"` with your browser to see the result.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
